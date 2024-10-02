@@ -22,3 +22,4 @@ export const updateTodo = (req, res, next) => {
 export const deleteTodo = (req, res, next) => {
     res.json('Todo deleted!');
 }
+
