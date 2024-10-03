@@ -3,7 +3,7 @@
 // the return is added or applied on the last logic in the function
 // console is for debuging ....it actual not part of the code
 
-import { TodoModel } from "../models/todo.js";
+import { TodoModel } from "../model/todo.js";
 
 export const addTodo = async (req, res, next) => {
     try {
