@@ -1,11 +1,11 @@
 export const register = (req, res, next) => {
-    res.json('User register!')
+    res.json('User register!');
 }
 
 export const logIn = (req, res, next) => {
-    res.json('User logged in!')
+    res.json('User logged in!');
 }
 
 export const logOut = (req, res, next) => {
-    res.json('User logged out!')
+    res.json('User logged out!');
 }

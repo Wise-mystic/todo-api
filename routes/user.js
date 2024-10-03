@@ -5,14 +5,14 @@ import { logIn, logOut, register } from "../controllers/user.js";
 const userRouter = Router();
 
 // Define routes
-userRouter.post ('./register', register);
+userRouter.post ('./users/register', register);
 
-userRouter.post ('./logIn', logIn);
+userRouter.post ('./users/login', logIn);
 
-userRouter.post ('./logOut', logOut);
+userRouter.post ('./users/logout', logOut);
 
-// listen  to route 
-export default userRouter
+// export  router 
+export default userRouter;
 
 
 

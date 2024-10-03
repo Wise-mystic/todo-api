@@ -8,7 +8,7 @@ export const addTodo = (req, res, next) => {
     // validate user input
     // save todo to database
     // send them an email
-    res.json('Todo was added!');   
+    res.json('Todo was added!');
 }
 
 export const getTodos = (req, res, next) => {
