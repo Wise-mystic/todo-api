@@ -10,6 +10,9 @@ await mongoose.connect(process.env.MONGO_URI);
 // Create an express app
 const app = express();
 
+// use middleware
+app.use(express.json());
+
 // Use routes
 app.use(todoRouter);
 app.use(userRouter);
