@@ -1,11 +1,12 @@
 import { Router } from "express";
 import { addTodo, deleteTodo, getTodos, updateTodo } from "../controllers/todo.js";
+import { todoIconUpload } from "../middlewares/upload.js";
 
 // create a router
 const todoRouter = Router();
 
 // define route
-todoRouter.post('/todos', addTodo);
+todoRouter.post('/todos', todoIconUpload.single('icon'), addTodo);
 
 todoRouter.get('/todos',getTodos);
 
