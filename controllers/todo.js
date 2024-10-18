@@ -11,7 +11,7 @@ export const addTodo = async (req, res, next) => {
         // check if user is logged in
         // validate user input
         const { error, value } = addTodoValidator.validate({
-            ...req, body,
+            ...req.body,
             icon: req.file?.filename
         });
         if (error) {

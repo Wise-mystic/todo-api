@@ -1,12 +1,15 @@
-// import { string } from "joi";
 import { Schema, model } from "mongoose";
 import { toJSON } from "@reis/mongoose-to-json";
 
 const todoSchema = new Schema({
-    title: { type: String, required: true, unique: false},
-    icon: {type: String, reqired: true},
-    completed: { type: Boolean, default: false}
+    title: { type: String, required: true, unique: false },
+    icon: { type: String, required: true },
+    completed: { type: Boolean, default: false },
+    
+}, {
+    timestamps: true
 });
+
 todoSchema.plugin(toJSON);
 
 export const TodoModel = model('Todo', todoSchema);

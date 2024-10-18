@@ -1,22 +1,22 @@
 import multer from "multer";
-import {multerSaveFilesOrg} from "multer-savefilesorg";
+import { multerSaveFilesOrg } from "multer-savefilesorg";
 
-export const localUpload = multer({dest:'uploads/'});
+export const localUpload = multer({ dest: 'uploads/' });
 
-export const todoIconUpload =  multer({
-    Storage: multerSaveFilesOrg({
-        apiAccessToken: process.env.SAVEFILESORG_AOI_KEY,
+export const todoIconUpload = multer({
+    storage: multerSaveFilesOrg({
+        apiAccessToken: process.env.SAVEFILESORG_API_KEY,
         // Relativepath : '/uploads/*'
         relativePath: '/todo-api/todos/*'
-        }),
-        preservePath: true
+    }),
+    preservePath: true
 });
 
-export const userAvatarUpload =  multer({
-    Storage: multerSaveFilesOrg({
-        apiAccessToken: process.env.SAVEFILESORG_AOI_KEY,
+export const userAvatarUpload = multer({
+    storage: multerSaveFilesOrg({
+        apiAccessToken: process.env.SAVEFILESORG_API_KEY,
         // Relativepath : '/uploads/*'
         relativePath: '/todo-api/users/*'
-        }),
-        preservePath: true
+    }),
+    preservePath: true
 });
